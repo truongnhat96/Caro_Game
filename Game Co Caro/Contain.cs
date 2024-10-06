@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Game_Co_Caro
 {
-    class Contain
+    public class Contain
     {
-        public static int edgeChess = 28;
+        public static int edgeChess = 35;
     }
 }

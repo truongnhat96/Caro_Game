@@ -127,28 +127,31 @@
   <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu-bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu-bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="player" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="170796_button_256x256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\170796_button_256x256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu-bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu-bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="player-versus-player" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\player-versus-player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="x_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x copy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu-bar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu-bar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="170796_button_256x256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\170796_button_256x256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="onnnn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\onnnn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu-bar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu-bar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="x_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x copy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="send" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\send.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

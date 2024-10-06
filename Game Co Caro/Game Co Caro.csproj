@@ -55,8 +55,10 @@
     <Compile Include="Caro.Designer.cs">
       <DependentUpon>Caro.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataLAN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocketLAN.cs" />
     <EmbeddedResource Include="Caro.resx">
       <DependentUpon>Caro.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +117,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu-bar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
