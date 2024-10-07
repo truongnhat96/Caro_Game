@@ -73,6 +73,16 @@ namespace Game_Co_Caro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap admin {
+            get {
+                object obj = ResourceManager.GetObject("admin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caro {
             get {
                 object obj = ResourceManager.GetObject("caro", resourceCulture);
@@ -116,6 +126,16 @@ namespace Game_Co_Caro.Properties {
         internal static System.Drawing.Bitmap onnnn {
             get {
                 object obj = ResourceManager.GetObject("onnnn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap patient {
+            get {
+                object obj = ResourceManager.GetObject("patient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

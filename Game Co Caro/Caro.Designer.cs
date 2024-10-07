@@ -357,7 +357,6 @@
             // 
             // menuUndo
             // 
-            this.menuUndo.Enabled = false;
             this.menuUndo.Image = global::Game_Co_Caro.Properties.Resources.undo__1_;
             this.menuUndo.Name = "menuUndo";
             this.menuUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
@@ -383,9 +382,9 @@
             // newGamePlayOnlineToolStripMenuItem
             // 
             this.newGamePlayOnlineToolStripMenuItem.Enabled = false;
-            this.newGamePlayOnlineToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newGamePlayOnlineToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newGamePlayOnlineToolStripMenuItem.Name = "newGamePlayOnlineToolStripMenuItem";
-            this.newGamePlayOnlineToolStripMenuItem.Size = new System.Drawing.Size(135, 35);
+            this.newGamePlayOnlineToolStripMenuItem.Size = new System.Drawing.Size(149, 35);
             this.newGamePlayOnlineToolStripMenuItem.Text = "New Game ";
             this.newGamePlayOnlineToolStripMenuItem.Click += new System.EventHandler(this.newGamePlayOnlineToolStripMenuItem_Click);
             // 

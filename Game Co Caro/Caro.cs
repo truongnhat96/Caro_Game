@@ -401,6 +401,8 @@ namespace Game_Co_Caro
             if (vtMap[x, y] != 0) 
                 return;
 
+            if(chesses.Count > 0) menuUndo.Enabled = true;
+
             if (vsComputer)
             {
                 player = 1;
@@ -436,6 +438,7 @@ namespace Game_Co_Caro
                     ptbPayer.Image = Properties.Resources.x_copy;
                     txtNamePlayer.Text = "Player 1";
                 }
+                if(isConnected)
                 menuUndo.Enabled = false;
             }
             chess = new Chess(lb, x, y);
@@ -764,13 +767,11 @@ namespace Game_Co_Caro
             }
         }
 
-
-
+        //Heuristic-Based Algorithm
         #region AI
 
-        private readonly int[] Attack = new int[7] { 0, 9, 54, 162, 1458, 13112, 118008 };
-        private readonly int[] Defense = new int[7] { 0, 3, 27, 99, 729, 6561, 59049 };
-
+        private readonly int[] Attack = new int[] { 0, 4, 32, 256, 2048, 16384, 131072 };
+        private readonly int[] Defense = new int[] { 0, 3, 27, 243, 2187, 19683, 177147 };
 
 
         private void PutChess(int x, int y)
@@ -813,7 +814,7 @@ namespace Game_Co_Caro
             txtNamePlayer.Text = "AI";
             ptbPayer.Image = Properties.Resources.onnnn;
             noClick = true;
-
+            menuUndo.Enabled = false;
             await Task.Delay(2500);
             noClick = false;
 
@@ -835,6 +836,8 @@ namespace Game_Co_Caro
 
             if (max == 0) PutChess(10, 12);
             else PutChess(imax, jmax);
+
+            if (chesses.Count > 0) menuUndo.Enabled = true;
 
             txtNamePlayer.Text = "Player";
             ptbPayer.Image = Properties.Resources.x_copy;
@@ -1093,6 +1096,7 @@ namespace Game_Co_Caro
                 {
                     socket.IsServer = false;
                     newGamePlayOnlineToolStripMenuItem.Text = "New Game (Client)";
+                    newGamePlayOnlineToolStripMenuItem.Image = Properties.Resources.patient;
                     Listen();
                 }
                 else
@@ -1100,6 +1104,7 @@ namespace Game_Co_Caro
                     socket.CreateServer();
                     socket.IsServer = true;
                     newGamePlayOnlineToolStripMenuItem.Text = "New Game (Host)";
+                    newGamePlayOnlineToolStripMenuItem.Image = Properties.Resources.admin;
                 }
             }
             catch
@@ -1204,6 +1209,7 @@ namespace Game_Co_Caro
                     
                 newGamePlayOnlineToolStripMenuItem.Enabled = false;
                 newGamePlayOnlineToolStripMenuItem.Text = "New Game";
+                newGamePlayOnlineToolStripMenuItem.Image = null;
                 menuNewGame.Enabled = true;
                 ResetClicked = false;
 
