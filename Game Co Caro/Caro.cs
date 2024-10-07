@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Game_Co_Caro
 {
@@ -455,11 +456,20 @@ namespace Game_Co_Caro
 
         void MoveSynchronous(int x, int y)
         {
+            Chess template;
+
             if (player == 1)
             {
                 psbCooldownTime.Value = 0;
                 tmCooldown.Start();
                 Map[x + 1, y].Image = Properties.Resources.x;
+                if(chesses.Count > 1)
+                {
+                    template = chesses.Skip(1).First();
+                    Map[template.X + 1, template.Y].BackColor = Color.Snow;
+                }
+                    
+                Map[x + 1, y].BackColor = Color.Aqua;
                 vtMap[x, y] = 1;
                 Check(x, y);
 
@@ -471,6 +481,12 @@ namespace Game_Co_Caro
             {
                 psbCooldownTime.Value = 0;
                 Map[x + 1, y].Image = Properties.Resources.o;
+                if (chesses.Count > 1)
+                {
+                    template = chesses.Skip(1).First();
+                    Map[template.X + 1, template.Y].BackColor = Color.Snow;
+                }
+                Map[x + 1, y].BackColor = Color.Aqua;
                 vtMap[x, y] = 2;
                 Check(x, y);
 
@@ -489,8 +505,8 @@ namespace Game_Co_Caro
             if (gameover)
                 return;
             Label lb = sender as Label;
-            if (lb.BackColor != SystemColors.MenuHighlight)
-                lb.BackColor = Color.Aqua;
+            if (lb.BackColor != Color.Aqua)
+                lb.BackColor = SystemColors.GradientActiveCaption;
         }
 
         private void Caro_MouseLeave(object sender, EventArgs e)
@@ -498,7 +514,7 @@ namespace Game_Co_Caro
             if (gameover)
                 return;
             Label lb = sender as Label;
-            if (lb.BackColor != SystemColors.MenuHighlight)
+            if (lb.BackColor != Color.Aqua)
             lb.BackColor = Color.Snow;
         }
 
@@ -568,6 +584,7 @@ namespace Game_Co_Caro
             template = chesses.Pop();
             template.lb.Image = null;
             vtMap[template.X, template.Y] = 0;
+            Map[template.X + 1, template.Y].BackColor = Color.Snow;
             ChangePlayer();
         }
 
@@ -792,7 +809,7 @@ namespace Game_Co_Caro
             }
 
             Map[x+1, y].Image = Properties.Resources.o;
-            Map[x + 1, y].BackColor = SystemColors.MenuHighlight;
+            Map[x + 1, y].BackColor = Color.Aqua;
 
             vtMap[x, y] = 2;
             Check(x, y);
@@ -1163,7 +1180,7 @@ namespace Game_Co_Caro
                     MessageBox.Show(LAN.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case (int)CommandList.MESSAGE:
-                    MessageBox.Show(LAN.Message, "Tin nhắn từ đối phương", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(LAN.Message, "Tin nhắn từ đối phương");
                     break;
                 case (int)CommandList.NEW_GAME:
                     this.Invoke((MethodInvoker)delegate
